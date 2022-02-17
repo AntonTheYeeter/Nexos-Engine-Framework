@@ -1,4 +1,5 @@
 Makefile
+test/main.c
 
 .vscode/
 build/
