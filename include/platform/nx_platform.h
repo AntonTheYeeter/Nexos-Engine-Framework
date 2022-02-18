@@ -8,21 +8,22 @@ typedef struct NX_PlatformContext
     void* internalContext;
 } NX_PlatformContext;
 
-typedef struct NX_Window
-{
-    NX_U32 w;
-    NX_U32 h;
-    NX_String title;
-    NX_U8* flags;
-} NX_Window;
-
 typedef enum NX_KeyCode
 {
     NX_KEY_UNKNOWN = -1
 } NX_KeyCode;
 
+typedef enum NX_KeyState
+{
+    NX_KEY_STATE_UNKNOWN = -1,
+    NX_KEY_STATE_PRESSED = 1,
+    NX_KEY_STATE_HOLD = 2
+} NX_KeyState;
+
 void NX_PlatformInit();
-NX_Window* NX_CreateWindow(NX_U32 width, NX_U32 height, const NX_String title, NX_U8* flags);
+
+NX_KeyState NX_GetKeyInput(NX_KeyCode key);
+
 void NX_PlatformShutdown();
 
 #endif
