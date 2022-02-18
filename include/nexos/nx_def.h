@@ -47,10 +47,13 @@ NX_STATIC_ASSERT(sizeof(NX_B8) == 1, "NX_B8 must be 1 byte in size!!!");
 NX_STATIC_ASSERT(sizeof(NX_B32) == 4, "NX_B32 must be 4 bytes in size!!!");
 
 #if defined(WIN32) || defined(_WIN32) || defined(__WIN32__)
-#define NX_PLATFORM_WINDOWS 1
+#define NX_PLATFORM_WINDOWS
 
 #elif defined(__linux__) || defined(__gnu_linux__)
-#define NX_PLATFORM_LINUX 1
+#define NX_PLATFORM_LINUX
+
+#else
+#error Unknown Plaform !!!
 #endif
 
 #endif
