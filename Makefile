@@ -5,4 +5,4 @@ libnexos.a: nexos.o
 	ar rcs lib/libnexos.a lib/nexos.o
 
 testapp: libnexos.a
-	gcc -g test/main.c -Iinclude -Llib -lnexos -o build/test.exe
+	gcc -g test/main.c -Iinclude -Llib -lnexos -o build/test
