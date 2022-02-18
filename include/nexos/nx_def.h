@@ -19,6 +19,8 @@ typedef double NX_F64;
 typedef char NX_B8;
 typedef int NX_B32;
 
+typedef char* NX_String;
+
 #define NX_TRUE 1
 #define NX_FALSE 0
 
