@@ -6,11 +6,12 @@
 
 typedef enum NX_LibFeature
 {
-    NX_UNKNOWN_PARAMETER = -1,
     NX_ALL = 0,
     NX_WINDOW = 1,
-    NX_AUDIO = 2,
-    NX_PHYSICS = 3,
+    NX_GRAPHICS = 2,
+    NX_AUDIO = 3,
+    NX_PHYSICS = 4,
+    NX_INPUT = 5
 } NX_LibFeature;
 
 NX_B8 NX_LibInit(NX_LibFeature feature);

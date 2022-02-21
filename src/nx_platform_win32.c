@@ -12,9 +12,7 @@ typedef struct NX_Win32PlatformContext
     HWND hwnd;
 } NX_Win32PlatformContext;
 
-NX_PlatformContext platContext;
-
-void NX_PlatformInit()
+void NX_PlatformInit(NX_PlatformContext platContext)
 {
     platContext.internalContext = malloc(sizeof(NX_Win32PlatformContext));
 
@@ -28,7 +26,12 @@ NX_KeyState NX_GetKeyInput(NX_KeyCode key)
 
 }
 
-void NX_PlatformShutdown()
+NX_B8 NX_IsRunning()
+{
+    return NX_TRUE;
+}
+
+void NX_PlatformShutdown(NX_PlatformContext platContext)
 {
     free(platContext.internalContext);
 }

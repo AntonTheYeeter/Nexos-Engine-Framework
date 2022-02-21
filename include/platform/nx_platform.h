@@ -23,6 +23,7 @@ typedef enum NX_KeyState
 void NX_PlatformInit();
 
 NX_KeyState NX_GetKeyInput(NX_KeyCode key);
+NX_B8 NX_IsRunning();
 
 void NX_PlatformShutdown();
 
